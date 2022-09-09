@@ -6,11 +6,11 @@ function select(i) {
 
 
 
-function submit() {
+document.querySelector(".btn").addEventListener("click", function() {
     let main = document.querySelector("main")
-
+    
     if (selection < 1) {
-        btn.textContent = "select your rating"
+        main.innerHTML += `<p style="color: red">select your rating</p>`
     } else {
         main.innerHTML = `
         <div class="thank-you-state">
@@ -22,6 +22,4 @@ function submit() {
         </div>
     `
     }
-
-    
-}
+})
